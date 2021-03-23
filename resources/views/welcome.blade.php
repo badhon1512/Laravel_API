@@ -1,0 +1,3 @@
+<div>
+ Laravel API
+</div>
