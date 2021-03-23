@@ -23,3 +23,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('membersinfo',[MemberController::class,'getMembers']);
 
 Route::post('addmember',[MemberController::class,'addMember']);
+
+Route::put('update',[MemberController::class,'update']);

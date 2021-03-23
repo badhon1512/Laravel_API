@@ -45,4 +45,29 @@ class MemberController extends Controller
             return "Failed";
            }
     }
+
+    /// update 
+
+    function update(Request $req)
+    {
+       $member=Member::find($req->id);
+       $member->name=$req->name;
+           $member->email=$req->email;
+           $member->password=$req->password;
+           $member->blood_group=$req->blood_group;
+           $member->age=$req->age;
+           $member->address=$req->address;
+
+           $response=$member->save();
+
+           if($response)
+           {
+               return "Member has added successfully";
+           }
+           else
+           {
+            return "Failed";
+           }
+
+    }
 }
