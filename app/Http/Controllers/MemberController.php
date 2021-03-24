@@ -70,4 +70,11 @@ class MemberController extends Controller
            }
 
     }
+
+
+    function delete($id)
+    {
+        $member=Member::find($id);
+        $member->delete();
+    }
 }
