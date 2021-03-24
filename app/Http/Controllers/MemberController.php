@@ -77,4 +77,9 @@ class MemberController extends Controller
         $member=Member::find($id);
         $member->delete();
     }
+
+    function search($name)
+    {
+        return Member::where('name','like','%'.$name.'%')->get();
+    }
 }

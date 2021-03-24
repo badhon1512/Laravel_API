@@ -27,3 +27,5 @@ Route::post('addmember',[MemberController::class,'addMember']);
 Route::put('update',[MemberController::class,'update']);
 
 Route::delete('delete/{id}',[MemberController::class,'delete']);
+
+Route::get('search/{name}',[MemberController::class,'search']);
